@@ -27,10 +27,10 @@ Member.create(first_name: "Ryan", last_name: "Fitzpatrick", password: "pass")
 Member.create(first_name: "Gardner", last_name: "Minshew", password: "pass")
 
 
-Gathering.create(host: "Larry", date: "11/15/20", address: "123 Cardinal St, Phoenix, AZ 01010", time: "7:30 PM", book_group_id: 1)
-Gathering.create(host: "Megan", date: "11/10/20", address: "456 Sound Ave, Seattle, WA 02341", time: "6:45 PM", book_group_id: 2)
-Gathering.create(host: "Ryan", date: "11/28/20", address: "21 Dolphin Way, Miami, FL 92987", time: "5:30 PM", book_group_id: 2)
-Gathering.create(host: "Babe", date: "12/5/20", address: "76 Yankee Lane, NY, NY, 00010", time: "7:00 PM", book_group_id: 3)
+Gathering.create(member_id: "3", date: "11/15/20", address: "123 Cardinal St, Phoenix, AZ 01010", time: "7:30 PM", book_group_id: "1", book_id: "1")
+Gathering.create(member_id: "1", date: "11/10/20", address: "456 Sound Ave, Seattle, WA 02341", time: "6:45 PM", book_group_id: "2", book_id: "2")
+Gathering.create(member_id: "11", date: "11/28/20", address: "21 Dolphin Way, Miami, FL 92987", time: "5:30 PM", book_group_id: "2", book_id: "3")
+Gathering.create(member_id: "7", date: "12/5/20", address: "76 Yankee Lane, NY, NY, 00010", time: "7:00 PM", book_group_id: "3", book_id: "3")
 
 
 

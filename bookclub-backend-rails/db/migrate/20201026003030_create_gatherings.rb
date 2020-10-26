@@ -7,6 +7,8 @@ class CreateGatherings < ActiveRecord::Migration[6.0]
       t.string :time
       t.references :book_group, null: false, foreign_key: true
       t.references :book, null: false, foreign_key: true
+      t.references :member, null: false, foreign_key: true
+
 
       t.timestamps
     end
