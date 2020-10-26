@@ -1,0 +1,2 @@
+class GMembersController < ApplicationController
+end

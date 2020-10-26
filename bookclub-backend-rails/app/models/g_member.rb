@@ -1,0 +1,2 @@
+class GMember < ApplicationRecord
+end
