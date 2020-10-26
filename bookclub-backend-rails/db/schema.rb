@@ -36,17 +36,21 @@ ActiveRecord::Schema.define(version: 2020_10_26_003030) do
     t.string "address"
     t.string "time"
     t.bigint "book_group_id", null: false
+    t.bigint "book_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["book_group_id"], name: "index_gatherings_on_book_group_id"
+    t.index ["book_id"], name: "index_gatherings_on_book_id"
   end
 
   create_table "members", force: :cascade do |t|
-    t.string "name"
+    t.string "first_name"
+    t.string "last_name"
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   add_foreign_key "gatherings", "book_groups"
+  add_foreign_key "gatherings", "books"
 end

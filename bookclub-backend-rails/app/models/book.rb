@@ -1,3 +1,6 @@
 class Book < ApplicationRecord
-    # insert book group relationship here(belongs to or has_many)
+    has_many :book_groups
+    has_many :gatherings, through: :book_groups
+    has_many :members, through: :book_groups 
+
 end
