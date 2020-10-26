@@ -1,2 +1,0 @@
-class GMember < ApplicationRecord
-end
