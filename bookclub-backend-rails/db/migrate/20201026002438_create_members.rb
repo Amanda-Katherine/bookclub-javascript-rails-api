@@ -1,6 +1,6 @@
-class CreateGMembers < ActiveRecord::Migration[6.0]
+class CreateMembers < ActiveRecord::Migration[6.0]
   def change
-    create_table :g_members do |t|
+    create_table :members do |t|
       t.string :name
       t.string :password_digest
 
