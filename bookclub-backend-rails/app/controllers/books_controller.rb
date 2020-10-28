@@ -3,4 +3,9 @@ class BooksController < ApplicationController
         books = Book.all
         render json: books
     end
+    private
+
+    def book_params
+        params.require(:book).permit(:title, :author, :image, :description)
+    end
 end
