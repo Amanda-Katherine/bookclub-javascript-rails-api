@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(version: 2020_10_27_035444) do
   create_table "books", force: :cascade do |t|
     t.string "title"
     t.string "author"
-    t.string "cover_url"
-    t.string "preview"
+    t.string "image"
+    t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
