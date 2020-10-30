@@ -5,12 +5,18 @@ class BooksController < ApplicationController
     end
 
     def create 
-        book = Book.new(book_params)
+        book = Book.find_by(title: params["book"]["title"], author: params["book"]["author"])
 
-        if book.save
+        if book
             render json: book
-        else
-            render json: {message:comment.errors.full_messages}
+        else 
+            book = Book.new(book_params)
+
+            if book.save
+                render json: book
+            else
+                render json: {message:comment.errors.full_messages}
+            end
         end
     end
 
