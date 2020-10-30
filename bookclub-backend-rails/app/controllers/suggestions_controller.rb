@@ -5,8 +5,8 @@ class SuggestionsController < ApplicationController
     end
 
     def create
-      suggestion = Suggestion.new(suggestion_params)
-
+      suggestion = Suggestion.find_or_create_by(suggestion_params)
+     
       if suggestion.save
         render json: suggestion
       else
