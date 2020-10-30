@@ -26,19 +26,19 @@ Member.create(first_name: "Gardner", last_name: "Minshew", password: "pass", boo
 
 
 Gathering.create(host: "Larry", date: "11/15/20", address: "123 Cardinal St, Phoenix, AZ 01010", time: "7:30 PM", book_group_id: "1", book_id: "1")
-Gathering.create(host: "Megan", date: "11/10/20", address: "456 Sound Ave, Seattle, WA 02341", time: "6:45 PM", book_group_id: "2", book_id: "1")
+Gathering.create(host: "Megan", date: "11/10/20", address: "456 Sound Ave, Seattle, WA 02341", time: "6:45 PM", book_group_id: "2", book_id: "5")
 Gathering.create(host: "Al", date: "11/28/20", address: "21 Celtics Way, Miami, FL 92987", time: "5:30 PM", book_group_id: "2", book_id: "2")
 Gathering.create(host: "Babe", date: "12/5/20", address: "76 Yankee Lane, NY, NY, 00010", time: "7:00 PM", book_group_id: "3", book_id: "3")
 Gathering.create(host: "Gardner", date: "1/2/21", address: "8 Jaguar Ct, Jacksonville, FL, 92873", time: "7:00 PM", book_group_id: "3", book_id: "4")
-Gathering.create(host: "Ryan", date: "12/17/20", address: "76 Dolphin Loop, Miami, FL, 23452", time: "7:15 PM", book_group_id: "2", book_id: "5")
+Gathering.create(host: "Ryan", date: "12/17/20", address: "76 Dolphin Loop, Miami, FL, 23452", time: "7:15 PM", book_group_id: "2", book_id: "4")
 Gathering.create(host: "Sue", date: "11/15/20", address: "76 Stormy Way, Seattle, WA, 02341", time: "6:00 PM", book_group_id: "4", book_id: "6")
 
 
-Suggestion.create(book_id: "1", book_group_id: "1")
+Suggestion.create(book_id: "6", book_group_id: "1")
 Suggestion.create(book_id: "1", book_group_id: "2", vote: "7")
 Suggestion.create(book_id: "1", book_group_id: "3", vote: "4")
 
-Suggestion.create(book_id: "2", book_group_id: "2", vote: "11")
+# Suggestion.create(book_id: "2", book_group_id: "2", vote: "11")
 Suggestion.create(book_id: "2", book_group_id: "3", vote: "2")
 Suggestion.create(book_id: "2", book_group_id: "4", vote: "5")
 
@@ -54,7 +54,7 @@ Suggestion.create(book_id: "5", book_group_id: "3", vote: "2")
 Suggestion.create(book_id: "5", book_group_id: "4", vote: "0")
 
 Suggestion.create(book_id: "6", book_group_id: "2", vote: "1")
-Suggestion.create(book_id: "6", book_group_id: "4", vote: "1")
+# Suggestion.create(book_id: "6", book_group_id: "4", vote: "1")
 Suggestion.create(book_id: "6", book_group_id: "3", vote: "2")
 # Suggestion.create(title: "", author: "", image: "", description: "")
 # Suggestion.create(title: "", author: "", image: "", description: "")
