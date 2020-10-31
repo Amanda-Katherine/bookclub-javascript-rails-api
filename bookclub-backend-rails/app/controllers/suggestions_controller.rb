@@ -6,14 +6,24 @@ class SuggestionsController < ApplicationController
 
     def create
       suggestion = Suggestion.find_or_create_by(suggestion_params)
-     
+      
       if suggestion.save
         render json: suggestion
       else
-        render json: {message:comment.errors.full_messages}
+        render json: {message: suggestion.errors.full_messages}
       end
     end
+    
+    def update
+      suggestion = Suggestion.find_by(id: params["id"])
+      suggestion.vote = params["vote"]
 
+      if suggestion.save
+        render json: suggestion
+      else 
+        render json: {message: suggestion.errors.full_messages}
+      end
+    end
 
     private
 
