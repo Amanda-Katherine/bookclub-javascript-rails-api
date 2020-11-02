@@ -29,6 +29,14 @@ class SuggestionsController < ApplicationController
       end
     end
 
+    def destroy
+      suggestion = Suggestion.find_by(id: params["id"])
+
+      suggestion.destroy
+
+      render json: (message: "Suggestion successfully deleted")
+    end
+
     private
 
     def suggestion_params
