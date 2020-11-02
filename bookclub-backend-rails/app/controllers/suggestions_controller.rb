@@ -34,7 +34,7 @@ class SuggestionsController < ApplicationController
 
       suggestion.destroy
 
-      render json: (message: "Suggestion successfully deleted")
+      render json: ( :message => "Suggestion successfully deleted")
     end
 
     private
