@@ -13,6 +13,10 @@ class SuggestionsController < ApplicationController
         render json: {message: suggestion.errors.full_messages}
       end
     end
+
+    def show
+      suggestion = Suggestion.find_by(id: params["id"])
+    end
     
     def update
       suggestion = Suggestion.find_by(id: params["id"])
