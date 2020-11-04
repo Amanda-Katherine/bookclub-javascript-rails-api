@@ -35,8 +35,5 @@ This project is intended to be a safe, welcoming space for collaboration, and co
 
 ## Acknowledgments
 
-<<<<<<< HEAD
 I would like to thank all the book lovers out there.
-=======
-I would like to thank all the book lovers out there.
->>>>>>> 1a571b87dc17c7e3483d94186a3fa3b7601e7b0a
+
