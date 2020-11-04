@@ -17,3 +17,20 @@ To run this application in your local environment, please follow these steps:
 7. Run 'rails s'
 8. Open the 'index.html' file in your browser. With a mac you can write 'open index.html' in your terminal
 
+## Authors
+
+* All work done by Amanda Walker Brubaker [Amanda Walker Brubaker](https://github.com/Amanda-Katherine)
+
+## License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT)
+
+## Contributing
+
+Contributions are welcome whether they be bug reports or pull requests at: https://github.com/Amanda-Katherine/bookclub-javascript-rails-api
+
+This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
+
+## Acknowledgments
+
+I would like to thank all the book lovers out there.
