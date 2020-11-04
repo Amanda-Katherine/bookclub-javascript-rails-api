@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 ![On The Same Page](./bookclub-frontend-javascript/styles/images/Cover-Photo--On-the-Same-Page.png)
-=======
-![On The Same Page](../bookclub-frontend-javascript/styles/images/Cover Photo - On the Same Page.png)
->>>>>>> 1a571b87dc17c7e3483d94186a3fa3b7601e7b0a
+
 # On The Same Page 
 
 On The Same Page is an application where Bookclubs can come together to find their next book. Members can suggest new books and vote on ones suggested.  Future versions will include Club creation, Member login, and show when and where the next Meeting will be. 
