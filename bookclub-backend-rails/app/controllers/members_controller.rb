@@ -22,4 +22,10 @@ class MembersController < ApplicationController
             }
         end
     end
+
+    # def show
+    #     member = Member.find_by(id: params[:id])
+    #     render json: member
+    # end
+
 end
