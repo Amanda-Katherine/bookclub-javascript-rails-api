@@ -1,7 +1,6 @@
 #this page created from customer user auth documentation (not used with Devise)
 class SessionsController < ApplicationController
-    include CurrentMemberConcern
-    # skip_before_action :verify_authenticity_token
+    # include CurrentMemberConcern
 
     def create
         binding.pry
@@ -34,12 +33,16 @@ class SessionsController < ApplicationController
         end
     end
 
-    def destroy # was called logout for custom user auth
-        # reset_session # from custom user auth method
-        session[:member_id] = nil
-        # session.delete(:user_id)  #test this if above doesn't work
+    def destroy
+        # session[:member_id] = nil
+       logout!
 
-        render json: { status: 200, logged_out: true }
+        render json: { 
+            status: 200, 
+            logged_out: true 
+        }
+    end
+
     end
 end
 
