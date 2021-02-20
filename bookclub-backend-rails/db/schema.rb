@@ -47,8 +47,9 @@ ActiveRecord::Schema.define(version: 2020_10_27_035444) do
   create_table "members", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
+    t.string "email"
     t.string "password_digest"
-    t.bigint "book_group_id", null: false
+    t.bigint "book_group_id", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["book_group_id"], name: "index_members_on_book_group_id"
