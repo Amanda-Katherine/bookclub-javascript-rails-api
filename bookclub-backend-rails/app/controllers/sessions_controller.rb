@@ -3,32 +3,36 @@ class SessionsController < ApplicationController
     # include CurrentMemberConcern
 
     def create
-        binding.pry
-        member = Member
         .find_by(email: params[:member][:email])
         .try(:authenticate, params[:member][:password])
-
-        if member 
-            session[:member_id] = member.id
+        @member = Member
+        if @member 
+            login!
+            # binding.pry
             render json: {
-                status: :created, 
                 logged_in: true,
-                member: member 
-            }
+                member: @member,
+                session: session
+            },
+            status: :created 
         else 
-            render json: { status: 401 }
+            render json: { 
+                status: 401,
+             errors: 'No such member. Verify credentials and try again or sign up'
+            }
         end
     end
 
-    def logged_in?
-        if @current_member
+    def is_logged_in? 
+        if logged_in? && current_member
             render json: {
-                logged_in: true, 
-                member: @current_member
+                logged_in: true,
+                member: current_member
             }
-        else
-            render json: {
-                logged_in: false
+         else
+             render json: {
+                 logged_in: false,
+                 message: 'no such member'
             }
         end
     end
