@@ -3,9 +3,9 @@ class SessionsController < ApplicationController
     # include CurrentMemberConcern
 
     def create
-        .find_by(email: params[:member][:email])
-        .try(:authenticate, params[:member][:password])
         @member = Member
+        .find_by(email: session_params[:email])
+        .try(:authenticate, session_params[:password])
         if @member 
             login!
             # binding.pry
@@ -47,6 +47,8 @@ class SessionsController < ApplicationController
         }
     end
 
+    def session_params
+        params.require(:member).permit(:email, :password)
     end
 end
 
