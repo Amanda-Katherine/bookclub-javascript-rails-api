@@ -38,18 +38,29 @@ class SessionsController < ApplicationController
     end
 
     def destroy
-        # session[:member_id] = nil
-       logout!
-
-        render json: { 
-            status: 200, 
-            logged_out: true 
-        }
+        session.clear
+       
+        if !!(session == {})
+            render json: { 
+                status: 200, 
+                logged_in: false,
+                message: "Logout was successful"
+            }
+        else 
+            render json: {
+                logged_in: true, 
+                message: "Logout was unsuccessful"
+            }
+        end
     end
 
     def session_params
         params.require(:member).permit(:email, :password)
     end
+
+    # def logout_params
+    #     params.require(:session).permit(:memberId)
+    # end
 end
 
 #use the below code in your terminal to test if the session will accept a POST request 
