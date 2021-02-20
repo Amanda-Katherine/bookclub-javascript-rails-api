@@ -14,14 +14,14 @@ class MembersController < ApplicationController
 
     def create 
         @member = Member.new(member_params)
-        binding.pry
 
         if @member.save
-            session[:member_id] = @member.id
+            login!
             render json: {
                 status: :created,
                 logged_in: true,
-                member: @member
+                member: @member,
+                message: 'Member successfully created! You are now logged in.'
             }
         else
             render json: {
