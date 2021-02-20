@@ -1,31 +1,53 @@
 class MembersController < ApplicationController
     def index
-        members = Member.all
-        render json: members
-    end
-
-    def create 
-        member = Member.new(member_params)
-        binding.pry
-
-        if member.save
-            session[:member_id] = member.id
-            render json: {
-                status: :created,
-                logged_in: true,
-                member: member
-            }
+        @members = Member.all
+        
+        if @members
+            render json: {members: @members}
         else
             render json: {
-                status: 403,
-                logged_in: false
+                status: 500,
+                errors: ['No members found']
             }
         end
     end
 
-    # def show
-    #     member = Member.find_by(id: params[:id])
-    #     render json: member
-    # end
+    def create 
+        @member = Member.new(member_params)
+        binding.pry
 
+        if @member.save
+            session[:member_id] = @member.id
+            render json: {
+                status: :created,
+                logged_in: true,
+                member: @member
+            }
+        else
+            render json: {
+                status: 403,
+                logged_in: false,
+                errors: @member.errors.full_messages
+            }
+        end
+    end
+
+    def show
+        @member = Member.find(params[:id])
+
+        if @member
+            render json: {member: @member}
+        else
+            render json: {
+                status: 500,
+                errors: ['Member not found.']
+            }
+        end
+    end
+
+    private
+
+    def member_params
+        params.require(:member).permit(:first_name, :last_name, :email, :password, :password_confirmation)
+    end
 end
