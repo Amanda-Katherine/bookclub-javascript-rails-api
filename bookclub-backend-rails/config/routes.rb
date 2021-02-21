@@ -9,5 +9,9 @@ Rails.application.routes.draw do
   
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
-  root to: "static#home"
+  # get '/logged_in', to: 'sessions#is_logged_in?'
+
+
+  # for own user auth
+  # root to: "static#home"
 end
