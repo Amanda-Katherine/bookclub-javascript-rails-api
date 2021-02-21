@@ -21,7 +21,7 @@ To run this application in your local environment, please follow these steps:
 
 ## Authors
 
-* All work done by Amanda Walker Brubaker [Amanda Walker Brubaker](https://github.com/Amanda-Katherine)
+- All contribution by [Amanda Brubaker](https://github.com/Amanda-Katherine)
 
 ## License
 
