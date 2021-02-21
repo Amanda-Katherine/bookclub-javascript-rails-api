@@ -35,5 +35,6 @@ This project is intended to be a safe, welcoming space for collaboration, and co
 
 ## Acknowledgments
 
-I would like to thank all the book lovers out there.
+Thanks to all the book lovers out there.
 
+Special thanks to [CSS Script](https://www.cssscript.com/mobile-site-navbar/) and [Mohssine aboutaj](https://codepen.io/MohssineAboutajWeb/pen/wpBQEo) which my navbar and login registration form were adapted from.
