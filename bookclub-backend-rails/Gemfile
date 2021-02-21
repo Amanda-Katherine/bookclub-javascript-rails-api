@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.1'
@@ -17,6 +18,12 @@ gem 'active_model_serializers', '~> 0.10.0'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# gem Devise for user authentication and cookies
+# gem 'devise'
+
+# omniauth capabilities (will use in future versions)
+# gem 'omniauth'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
@@ -25,11 +32,13 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors'
-gem 'pry'
+
+# gem 'jwt'
+gem 'dotenv-rails'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry'
 end
 
 group :development do
