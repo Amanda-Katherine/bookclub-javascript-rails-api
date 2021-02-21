@@ -21,7 +21,7 @@ To run this application in your local environment, please follow these steps:
 
 ## Authors
 
-- All contribution by [Amanda Brubaker](https://github.com/Amanda-Katherine)
+- All contributions by [Amanda Brubaker](https://github.com/Amanda-Katherine)
 
 ## License
 
