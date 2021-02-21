@@ -16,8 +16,8 @@ To run this application in your local environment, please follow these steps:
 4. Run 'rails db:create:all'
 5. Run 'rails db:migrate'
 6. Run 'rails db:seed'
-7. Run 'rails s'
-8. Open the 'index.html' file in your browser. With a mac you can write 'open index.html' in your terminal
+7. Run 'rails s' from the backend directory
+8. Open the 'index.html' file in your browser. With a mac you can write 'open index.html' in your terminal from the frontend directory.
 
 ## Authors
 
