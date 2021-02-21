@@ -22,6 +22,7 @@ To run this application in your local environment, please follow these steps:
 ## Authors
 
 - All contributions by [Amanda Brubaker](https://github.com/Amanda-Katherine)
+  _Version 2.0 will include group creation, member admin capabilities for a group, a member page where readers can create their own personal book lists._
 
 ## License
 
@@ -29,7 +30,7 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 
 ## Contributing
 
-Contributions are welcome whether they be bug reports or pull requests at: https://github.com/Amanda-Katherine/bookclub-javascript-rails-api
+All contributions are welcome whether they be bug reports, pull requests, or fun new ideas at: https://github.com/Amanda-Katherine/bookclub-javascript-rails-api
 
 This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
 
